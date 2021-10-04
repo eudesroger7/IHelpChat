@@ -2,6 +2,9 @@
   <div class="page-render">
     <div class="navbar">
       <div class="top-bar">
+        <button mat-icon-button class="menu-toggle" (click)="navbarMobileOpened = !navbarMobileOpened">
+          <mat-icon>{{navbarMobileOpened ? 'close' : 'menu'}}</mat-icon>
+        </button>
         <img alt="logo" src="assets/images/logo.svg"/>
         <div class="search-container">
           <i class="fas fa-search"></i>
@@ -25,11 +28,12 @@
           <i class="fas fa-user-circle user-icon"></i>
         </div>
       </div>
-      <div class="menu">
+      <div class="menu {{navbarMobileOpened ? 'opened' : ''}}">
         <a class="menu-item"
            *ngFor="let menu of menus"
            [routerLink]="menu?.path"
-           [routerLinkActive]="'active'">
+           [routerLinkActive]="'active'"
+           (click)="navbarMobileOpened = false">
           <i [class]="menu?.icon"></i>
           {{menu?.title}}
         </a>

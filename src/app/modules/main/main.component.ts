@@ -9,6 +9,7 @@ import {clearSearch, setSearch} from '../../state/actions/search.action';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  public navbarMobileOpened = false;
   public search$: Observable<any>;
   public menus = [
     {title: 'Dashboard',     path: '/dashboard',  icon: 'fas fa-chart-pie'},

@@ -18,3 +18,14 @@
   width: 100%;
   align-items: stretch;
 }
+
+@media screen and (max-width: 991px) {
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .message-text-area {
+    width: 100%;
+    max-width: 100%;
+  }
+}
