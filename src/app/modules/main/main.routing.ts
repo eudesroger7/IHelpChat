@@ -8,6 +8,10 @@ const routes: Routes = [
   }, {
     path: 'marketing/:id',
     loadChildren: () => import('./pages/marketing-details/marketing-details.module').then(m => m.MarketingDetailsModule)
+  }, {
+    path: '',
+    redirectTo: 'marketing',
+    pathMatch: 'full'
   }
 ];
 
