@@ -8,6 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {CardMetricModule} from "../../../../components/metric-card/card-metric.module";
+import {GetMarketingContactStatusTitleModule} from "../../../../pipes/get-marketing-contact-status-title.pipe";
 
 const routes: Routes = [
   {
@@ -20,16 +21,17 @@ const routes: Routes = [
   declarations: [
     MarketingDetailsComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    FormsModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    CardMetricModule,
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        FormsModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        CardMetricModule,
+        GetMarketingContactStatusTitleModule,
+    ]
 })
 export class MarketingDetailsModule { }

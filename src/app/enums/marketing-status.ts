@@ -1,0 +1,6 @@
+export enum MARKETING_STATUS {
+  PENDENTE = 1,
+  ENVIANDO,
+  ENVIADO,
+  CANCELADO
+}

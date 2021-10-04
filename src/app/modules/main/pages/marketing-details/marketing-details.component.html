@@ -7,19 +7,19 @@
   </div>
   <div class="cards-container">
     <app-card-metric title="Aguardando Envio"
-                     [value]="dataSource?.waiting">
+                     [value]="metrics?.waiting">
     </app-card-metric>
     <app-card-metric title="Enviados"
-                     [value]="dataSource?.sent">
+                     [value]="metrics?.sent">
     </app-card-metric>
     <app-card-metric title="Não Enviados"
-                     [value]="dataSource?.not_sent">
+                     [value]="metrics?.not_sent">
     </app-card-metric>
   </div>
   <div class="card">
     <textarea class="message-text-area"
               rows="3"
-              [value]="dataSource?.message"
+              [value]="dataSource?.Mensagem"
               readonly>
     </textarea>
     <div class="rg-table">
@@ -29,11 +29,11 @@
         <div class="grow-1">Enviado</div>
         <div class="grow-1">Variáveis</div>
       </div>
-      <div class="rg-row" *ngFor="let item of dataSource?.contacts">
-        <div class="grow-1">{{item?.contact}}</div>
-        <div class="grow-1">{{item?.send_date | date: 'dd/MM/yyyy HH:mm'}}</div>
-        <div class="grow-1">{{item?.status}}</div>
-        <div class="grow-1">{{item?.variables}}</div>
+      <div class="rg-row" *ngFor="let item of dataSource?.Importacao">
+        <div class="grow-1">{{item?.Contato}}</div>
+        <div class="grow-1">{{item?.DataEnvio | date: 'dd/MM/yyyy HH:mm'}}</div>
+        <div class="grow-1">{{item?.Status | getMarketingContactStatusTitle}}</div>
+        <div class="grow-1">{{item?.Variaveis?.join(', ')}}</div>
       </div>
     </div>
   </div>

@@ -36,7 +36,6 @@ export class TokenInterceptor implements HttpInterceptor {
       tap(
         (event: HttpEvent<any>) => {
           if (event instanceof HttpResponse) {
-            console.log('request finish');
             this.store.dispatch(stopLoading());
             if (event.body.error) {
               throw event;
