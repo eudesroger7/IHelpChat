@@ -1,0 +1,30 @@
+<div class="page">
+  <div class="rg-nav">
+    <p>Campanhas</p>
+    <button mat-button>
+      <i class="fas fa-plus"></i> Nova campanha
+    </button>
+  </div>
+  <div class="card">
+    <div class="rg-table">
+      <div class="rg-header">
+        <div class="grow-2">Data</div>
+        <div class="grow-5">Título</div>
+        <div class="grow-3">Data Agendamento</div>
+        <div class="grow-2">Status</div>
+        <div class="grow-1">Ações</div>
+      </div>
+      <div class="rg-row" *ngFor="let item of filteredDataSource" [routerLink]="['/marketing', item?.id]">
+        <div class="grow-2">{{item?.date | date: 'dd/MM/yyyy HH:mm'}}</div>
+        <div class="grow-5">{{item?.title}}</div>
+        <div class="grow-3">{{item?.scheduling_date | date: 'dd/MM/yyyy HH:mm'}}</div>
+        <div class="grow-2">{{item?.status}}</div>
+        <div class="grow-1">
+          <button mat-icon-button title="Cancelar campanha" (click)="dataSource">
+            <i class="fas fa-ban"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

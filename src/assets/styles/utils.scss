@@ -1,0 +1,17 @@
+@import "../../assets/styles/variables";
+
+.full-width {
+  width: 100%;
+}
+
+.page {
+  padding: 10px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: $defaultBoxShadow;
+  border-radius: 3px;
+  overflow: hidden;
+}

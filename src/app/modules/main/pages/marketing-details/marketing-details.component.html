@@ -1,0 +1,40 @@
+<div class="page">
+  <div class="rg-nav">
+    <p>Campanhas</p>
+    <button mat-button [routerLink]="['/marketing']">
+      <i class="fas fa-chevron-left"></i> Voltar
+    </button>
+  </div>
+  <div class="cards-container">
+    <app-card-metric title="Aguardando Envio"
+                     [value]="dataSource?.waiting">
+    </app-card-metric>
+    <app-card-metric title="Enviados"
+                     [value]="dataSource?.sent">
+    </app-card-metric>
+    <app-card-metric title="Não Enviados"
+                     [value]="dataSource?.not_sent">
+    </app-card-metric>
+  </div>
+  <div class="card">
+    <textarea class="message-text-area"
+              rows="3"
+              [value]="dataSource?.message"
+              readonly>
+    </textarea>
+    <div class="rg-table">
+      <div class="rg-header">
+        <div class="grow-1">Contato</div>
+        <div class="grow-1">Data Envio</div>
+        <div class="grow-1">Enviado</div>
+        <div class="grow-1">Variáveis</div>
+      </div>
+      <div class="rg-row" *ngFor="let item of dataSource?.contacts">
+        <div class="grow-1">{{item?.contact}}</div>
+        <div class="grow-1">{{item?.send_date | date: 'dd/MM/yyyy HH:mm'}}</div>
+        <div class="grow-1">{{item?.status}}</div>
+        <div class="grow-1">{{item?.variables}}</div>
+      </div>
+    </div>
+  </div>
+</div>

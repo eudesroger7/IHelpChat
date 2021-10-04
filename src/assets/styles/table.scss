@@ -1,0 +1,109 @@
+@import "../../assets/styles/variables";
+
+.rg-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: $defaultBoxShadow;
+  min-height: 40px;
+  border-radius: 3px;
+  padding: 5px 10px;
+
+  > button {
+    font-weight: 600;
+    color: $dark2;
+    font-size: .7rem;
+    text-transform: uppercase;
+  }
+
+  > p {
+    margin: 0;
+    font-family: $fontFamily, sans-serif;
+    font-weight: 500;
+    color: $dark2;
+  }
+}
+
+.rg-table {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $fontFamily, sans-serif;
+  //background-color: #ffffff;
+  //padding: 10px 5px 0 5px;
+  //box-shadow: $defaultBoxShadow;
+  //border-radius: 3px;
+  //overflow: hidden;
+}
+
+.grow-0,
+.grow-1,
+.grow-2,
+.grow-3,
+.grow-4,
+.grow-5 {
+  flex-basis: 10px;
+}
+
+.grow-0 { flex-grow: 0; }
+.grow-1 { flex-grow: 1; }
+.grow-2 { flex-grow: 2; }
+.grow-3 { flex-grow: 3; }
+.grow-4 { flex-grow: 4; }
+.grow-5 { flex-grow: 5; }
+
+.rg-header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: $dark2;
+  font-weight: 500;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #ccc;
+
+  >div {
+    margin: 0;
+  }
+}
+
+.rg-row {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  min-height: 45px;
+  border-radius: 0;
+  flex-direction: row;
+  display: flex;
+  padding: 0 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #ffffff;
+  border-bottom: 2px solid #eeeeee;
+  color: $gray;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  &:last-child {
+   border-bottom: none;
+  }
+
+  > div {
+    padding-right: 0.25rem !important;
+    font-size: 14px !important;
+    text-transform: unset !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .label {
+    display: none;
+  }
+}

@@ -1,0 +1,119 @@
+@import '../../../assets/styles/variables';
+
+.admin-container {
+  height: 100%;
+  display: flex;
+
+  .page-render {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+
+    .navbar {
+      background-color: #fff;
+      box-shadow: $defaultBoxShadow;
+
+      .top-bar {
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f9f9f9;
+      }
+
+      .menu {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+
+        .menu-item {
+          padding: 10px 5px;
+          text-decoration: none;
+          color: $gray;
+          font-weight: 600;
+          font-size: .9rem;
+
+          > i {
+            margin-right: 5px;
+          }
+
+          &.active {
+            color: #111;
+          }
+        }
+      }
+
+      .search-container {
+        background-color: #fafafa;
+        border-radius: 6px;
+        padding: 10px 0 10px 10px;
+        height: 40px;
+        max-width: 400px;
+        flex: 1;
+        box-shadow: $defaultBoxShadow;
+        display: flex;
+        align-items: center;
+
+        .input-search {
+          flex: 1;
+          outline: none;
+          border: none;
+          padding-left: 10px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          font-style: italic;
+          color: $gray;
+          background-color: transparent;
+        }
+
+        i {
+          font-size: 14px;
+          color: $gray;
+        }
+      }
+
+      .account-menu {
+        display: flex;
+        align-items: center;
+        color: $dark;
+        cursor: pointer;
+
+        .user-name,
+        .company-name {
+          margin: 0 10px;
+          font-size: .7rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-align: right;
+        }
+
+        .user-icon {
+          font-size: 25px;
+          color: $gray;
+        }
+
+        .battery-status {
+          align-self: flex-end;
+          margin-bottom: -3px;
+
+          &::before {
+            content: " ";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: #00c700;
+            display: block;
+            margin-top: -9px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .routing {
+      height: 100%;
+    }
+  }
+}
